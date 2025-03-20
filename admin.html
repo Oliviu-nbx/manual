@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page - Edit Web Hosting Data</title>
+    <script src="https://cdn.tailwindcss.com"></script> <!-- Add Tailwind CSS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script> <!-- Add PapaParse -->
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <header class="bg-gray-800 text-white py-6 shadow-md">
+        <h1 class="text-3xl font-bold text-center">Admin Page - Edit Web Hosting Data</h1>
+        <nav class="mt-4">
+            <ul class="flex justify-center space-x-6">
+                <li><a href="index.html" class="text-white hover:bg-blue-600 px-4 py-2 rounded">Home</a></li>
+                <li><a href="shared-hosting.html" class="text-white hover:bg-blue-600 px-4 py-2 rounded">Shared Hosting</a></li>
+                <li><a href="wordpress-hosting.html" class="text-white hover:bg-blue-600 px-4 py-2 rounded">WordPress Hosting</a></li>
+                <li><a href="vps-servers.html" class="text-white hover:bg-blue-600 px-4 py-2 rounded">VPS Servers</a></li>
+                <li><a href="dedicated-server.html" class="text-white hover:bg-blue-600 px-4 py-2 rounded">Dedicated Server</a></li>
+                <li><a href="ssl-certificates.html" class="text-white hover:bg-blue-600 px-4 py-2 rounded">SSL Certificates</a></li>
+                <li><a href="domain-names.html" class="text-white hover:bg-blue-600 px-4 py-2 rounded">Domain Names</a></li>
+                <li><a href="admin.html" class="text-white hover:bg-blue-600 px-4 py-2 rounded">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="admin-content" class="container mx-auto py-10 px-4">
+        <div class="overflow-x-auto">
+            <table id="data-table" class="table-auto w-full border-collapse border border-gray-300">
+                <thead class="bg-gray-800 text-white">
+                    <tr>
+                        <!-- Headers will be dynamically added here -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Rows will be dynamically added here -->
+                </tbody>
+            </table>
+        </div>
+        <button id="save-button" class="mt-4 bg-green-500 text-white px-6 py-2 rounded hover:bg-green-600">
+            Save Changes
+        </button>
+    </section>
+
+    <footer class="bg-gray-900 text-white text-center py-4 mt-10">
+        <p>© 2024 Your Website</p>
+    </footer>
+
+    <script src="admin.js"></script>
+</body>
+</html>

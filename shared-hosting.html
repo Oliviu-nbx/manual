@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shared Hosting Plans - Affordable Hosting for Small Websites</title>
+    <meta name="description" content="Explore affordable shared hosting plans for small websites and blogs. Compare features, prices, and ratings to find the best hosting provider.">
+    <meta name="keywords" content="shared hosting, affordable hosting, small websites, hosting plans, Romania hosting">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="bg-gray-800 text-white py-6 shadow-md">
+        <h1 class="text-3xl font-bold text-center">Shared Hosting Plans</h1>
+        <nav class="mt-4">
+            <ul class="flex justify-center space-x-6">
+                <li><a href="index.html" class="text-white hover:bg-blue-600 px-4 py-2 rounded">Home</a></li>
+                <li><a href="shared-hosting.html" class="text-white hover:bg-blue-600 px-4 py-2 rounded">Shared Hosting</a></li>
+                <li><a href="wordpress-hosting.html" class="text-white hover:bg-blue-600 px-4 py-2 rounded">WordPress Hosting</a></li>
+                <li><a href="vps-servers.html" class="text-white hover:bg-blue-600 px-4 py-2 rounded">VPS Servers</a></li>
+                <li><a href="dedicated-server.html" class="text-white hover:bg-blue-600 px-4 py-2 rounded">Dedicated Server</a></li>
+                <li><a href="ssl-certificates.html" class="text-white hover:bg-blue-600 px-4 py-2 rounded">SSL Certificates</a></li>
+                <li><a href="domain-names.html" class="text-white hover:bg-blue-600 px-4 py-2 rounded">Domain Names</a></li>
+                <li><a href="admin.html" class="text-white hover:bg-blue-600 px-4 py-2 rounded">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="container mx-auto py-10 px-4">
+        <h2 class="text-2xl font-bold mb-4">Affordable Hosting for Small Websites</h2>
+        <p>Discover the best shared hosting plans for small websites and blogs. Compare features, prices, and ratings to choose the perfect hosting provider for your needs.</p>
+        <div id="shared-hosting-plans" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Shared hosting plans will be dynamically added here -->
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white text-center py-4 mt-10">
+        <p>© 2024 Your Website</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sharedHostingPlans = [
+                // Add shared hosting plans data here
+                {
+                    companyName: "Namebox",
+                    planName: "Start",
+                    price: "5.99 EUR",
+                    storage: "10 GB",
+                    bandwidth: "Unlimited",
+                    features: "Free SSL, Daily Backups",
+                    rating: "4.1 ★"
+                },
+                // Add more plans as needed
+            ];
+
+            const container = document.getElementById('shared-hosting-plans');
+            sharedHostingPlans.forEach(plan => {
+                const planElement = document.createElement('div');
+                planElement.classList.add('hosting-plan');
+                planElement.innerHTML = `
+                    <h3>${plan.companyName} - ${plan.planName}</h3>
+                    <p>Price: ${plan.price}</p>
+                    <p>Storage: ${plan.storage}</p>
+                    <p>Bandwidth: ${plan.bandwidth}</p>
+                    <p>Features: ${plan.features}</p>
+                    <p>Rating: ${plan.rating}</p>
+                `;
+                container.appendChild(planElement);
+            });
+        });
+    </script>
+</body>
+</html>

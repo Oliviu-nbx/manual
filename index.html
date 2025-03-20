@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Hosting Packages</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to the CSS file -->
+    <script src="https://cdn.tailwindcss.com"></script> <!-- Add Tailwind CSS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script> <!-- Add PapaParse -->
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <header class="bg-gray-800 text-white py-6 shadow-md">
+        <h1 class="text-3xl font-bold text-center">Web Hosting Packages in Romania</h1>
+        <nav class="mt-4">
+            <ul class="flex justify-center space-x-6">
+                <li><a href="index.html" class="text-white hover:bg-blue-600 px-4 py-2 rounded">Home</a></li>
+                <li><a href="shared-hosting.html" class="text-white hover:bg-blue-600 px-4 py-2 rounded">Shared Hosting</a></li>
+                <li><a href="wordpress-hosting.html" class="text-white hover:bg-blue-600 px-4 py-2 rounded">WordPress Hosting</a></li>
+                <li><a href="vps-servers.html" class="text-white hover:bg-blue-600 px-4 py-2 rounded">VPS Servers</a></li>
+                <li><a href="dedicated-server.html" class="text-white hover:bg-blue-600 px-4 py-2 rounded">Dedicated Server</a></li>
+                <li><a href="ssl-certificates.html" class="text-white hover:bg-blue-600 px-4 py-2 rounded">SSL Certificates</a></li>
+                <li><a href="domain-names.html" class="text-white hover:bg-blue-600 px-4 py-2 rounded">Domain Names</a></li>
+                <li><a href="admin.html" class="text-white hover:bg-blue-600 px-4 py-2 rounded">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hosting-plans" class="container mx-auto py-10 px-4">
+        <!-- Hosting plans will be dynamically added here -->
+    </section>
+
+    <!-- Popup for details -->
+    <div id="popup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white rounded-lg shadow-lg p-6 w-11/12 max-w-lg relative">
+            <button id="popup-close" class="absolute top-2 right-2 bg-gray-800 text-white rounded-full w-8 h-8 flex items-center justify-center hover:bg-gray-600">&times;</button>
+            <div id="popup-content">
+                <!-- Popup content will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-900 text-white text-center py-4 mt-10">
+        <p>© 2024 Your Website</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

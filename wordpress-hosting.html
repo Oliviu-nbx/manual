@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordPress Hosting Plans - Optimized Hosting for WordPress</title>
+    <meta name="description" content="Discover the best WordPress hosting plans optimized for performance and security. Compare features, prices, and ratings to find the perfect hosting provider.">
+    <meta name="keywords" content="wordpress hosting, optimized hosting, wordpress websites, hosting plans, Romania hosting">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="bg-gray-800 text-white py-6 shadow-md">
+        <h1 class="text-3xl font-bold text-center">WordPress Hosting Plans</h1>
+        <nav class="mt-4">
+            <ul class="flex justify-center space-x-6">
+                <li><a href="index.html" class="text-white hover:bg-blue-600 px-4 py-2 rounded">Home</a></li>
+                <li><a href="shared-hosting.html" class="text-white hover:bg-blue-600 px-4 py-2 rounded">Shared Hosting</a></li>
+                <li><a href="wordpress-hosting.html" class="text-white hover:bg-blue-600 px-4 py-2 rounded">WordPress Hosting</a></li>
+                <li><a href="vps-servers.html" class="text-white hover:bg-blue-600 px-4 py-2 rounded">VPS Servers</a></li>
+                <li><a href="dedicated-server.html" class="text-white hover:bg-blue-600 px-4 py-2 rounded">Dedicated Server</a></li>
+                <li><a href="ssl-certificates.html" class="text-white hover:bg-blue-600 px-4 py-2 rounded">SSL Certificates</a></li>
+                <li><a href="domain-names.html" class="text-white hover:bg-blue-600 px-4 py-2 rounded">Domain Names</a></li>
+                <li><a href="admin.html" class="text-white hover:bg-blue-600 px-4 py-2 rounded">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="container mx-auto py-10 px-4">
+        <h2 class="text-2xl font-bold mb-4">Optimized Hosting for WordPress Websites</h2>
+        <p>Discover the best WordPress hosting plans optimized for performance and security. Compare features, prices, and ratings to choose the perfect hosting provider for your needs.</p>
+        <div id="wordpress-hosting-plans" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- WordPress hosting plans will be dynamically added here -->
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white text-center py-4 mt-10">
+        <p>© 2024 Your Website</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('./data.csv')
+                .then(response => response.text())
+                .then(csv => {
+                    const parsedData = Papa.parse(csv, { header: true, skipEmptyLines: true }).data;
+                    const wordpressPlans = parsedData.filter(plan => plan.Category === 'WordPress Hosting');
+                    const container = document.getElementById('wordpress-hosting-plans');
+
+                    wordpressPlans.forEach(plan => {
+                        const planElement = document.createElement('div');
+                        planElement.classList.add('hosting-plan');
+                        planElement.innerHTML = `
+                            <h3>${plan['Company Name']} - ${plan['Plan Name']}</h3>
+                            <p>Price: ${plan['Price']}</p>
+                            <p>Storage: ${plan['Storage']}</p>
+                            <p>Bandwidth: ${plan['Bandwidth']}</p>
+                            <p>Features: ${plan['Features']}</p>
+                            <p>Rating: ${plan['Trustpilot Rating']}</p>
+                        `;
+                        container.appendChild(planElement);
+                    });
+                })
+                .catch(error => console.error('Error loading WordPress hosting plans:', error));
+        });
+    </script>
+</body>
+</html>

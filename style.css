@@ -1,0 +1,268 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #444; /* Darker header for better contrast */
+    color: #fff;
+    padding: 1.5em 0; /* Increased padding for better spacing */
+    text-align: center;
+    font-size: 1.8em; /* Larger font size for the header */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+/* Menu Styling */
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #0056b3; /* Add hover effect */
+}
+
+#hosting-plans {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px; /* Increased padding for better spacing */
+    gap: 20px; /* Add gap between cards */
+}
+
+.hosting-plan {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px; /* Rounded corners for a modern look */
+    margin: 10px 0; /* Adjust margin for vertical list */
+    padding: 20px;
+    width: 100%; /* Full width for vertical layout */
+    text-align: center; /* Center text alignment */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+    min-height: 150px; /* Adjusted height for better appearance */
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Ensure vertical alignment */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+.hosting-plan:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.hosting-plan h2 {
+    color: #0056b3; /* Slightly darker blue for better readability */
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.hosting-plan .price {
+    font-size: 1.6em; /* Slightly larger price font */
+    font-weight: bold;
+    color: #28a745;
+    margin: 10px 0;
+}
+
+.plan-summary {
+    display: flex;
+    justify-content: space-between; /* Space between text and button */
+    align-items: center;
+    width: 100%; /* Ensure full width for alignment */
+    text-align: left; /* Align text to the left */
+}
+
+.plan-summary h3 {
+    margin: 0; /* Remove margin for proper alignment */
+    flex: 1; /* Allow text to take up available space */
+}
+
+.details-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s;
+    margin-left: 20px; /* Add spacing between text and button */
+    flex-shrink: 0; /* Prevent button from shrinking */
+}
+
+.details-button:hover {
+    background-color: #0056b3;
+}
+
+.plan-details {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+    text-align: left; /* Align detailed information to the left */
+}
+
+footer {
+    text-align: center;
+    padding: 1.5em 0; /* Increased padding for better spacing */
+    background-color: #222; /* Darker footer for better contrast */
+    color: #fff;
+    font-size: 0.9em;
+}
+
+/* Admin Page Table Styling */
+#data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    text-align: left;
+}
+
+#data-table thead th {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+#data-table tbody td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+#data-table tbody td input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#save-button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+#save-button:hover {
+    background-color: #218838;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px; /* Position at the top-right corner of the popup */
+    right: 10px;
+    color: #fff; /* White color for better visibility */
+    font-size: 24px; /* Adjust font size for better visibility */
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s, background-color 0.3s;
+    z-index: 1001; /* Ensure it is above other elements */
+    background-color: #444; /* Dark background for contrast */
+    border: none; /* Remove border */
+    border-radius: 50%; /* Make it circular */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.popup-close:hover,
+.popup-close:focus {
+    color: #000; /* Change color on hover for better visibility */
+    background-color: #f4f4f4; /* Add a subtle background on hover */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.category {
+    width: 100%; /* Ensure each category takes up the full width */
+    margin-bottom: 30px; /* Add spacing between categories */
+}
+
+.category h2 {
+    font-size: 1.8em; /* Larger font size for category titles */
+    color: #333; /* Darker color for better readability */
+    margin-bottom: 15px; /* Add spacing below the category title */
+    border-bottom: 2px solid #ddd; /* Add a subtle underline for separation */
+    padding-bottom: 5px;
+}
+
+.hosting-plan {
+    margin: 10px 0; /* Adjust margin for vertical alignment */
+    padding: 20px;
+    width: 100%; /* Ensure hosting plans take up the full width within a category */
+    text-align: center; /* Center text alignment */
+    min-height: 150px; /* Adjusted height for better appearance */
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Ensure vertical alignment */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+.highest-rated-card {
+    border: 2px solid #28a745; /* Green border to highlight the card */
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.5); /* Add a glowing effect */
+    transform: scale(1.02); /* Slightly enlarge the card */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+.best-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #ffcc00; /* Gold color for the badge */
+    color: #333;
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    z-index: 10;
+}
